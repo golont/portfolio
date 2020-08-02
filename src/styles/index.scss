@@ -10,6 +10,7 @@ $mainFontSize: 20px;
 
 $primaryColor: #04c2c9;
 $secondaryColor: #1b242f;
+$neutralColor: #e31b6d;
 
 * {
   margin: 0;
@@ -39,14 +40,17 @@ html {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .container {
   width: 100%;
   z-index: 1;
-  // display: flex;
-  // flex: 0 0 auto;
   position: relative;
   margin: 0 auto;
   max-width: $desktopWidth;
+  padding: 0 10px;
 
   @media screen and (max-width: $desktopWidth) {
     max-width: $smDesktopWidth;
@@ -69,4 +73,4 @@ html {
 @import "modules/header.scss";
 @import "modules/projects.scss";
 @import "modules/blocks.scss";
-
+@import "modules/contacts.scss";

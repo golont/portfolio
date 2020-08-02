@@ -8,3 +8,18 @@
     margin-bottom: 50px;
   }
 }
+
+.title {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  &-projects {
+    padding-top: 20px;
+  }
+
+  &-card {
+    font-size: 30px;
+    padding-bottom: 70px;
+  }
+}

@@ -1,6 +1,6 @@
 .header {
   background: $secondaryColor;
-  padding: 10px;
+  // padding: 10px;
   color: #fff;
   border-bottom: 3px solid $primaryColor;
   position: fixed;
@@ -11,15 +11,36 @@
   z-index: 2;
 
   .container {
+    height: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
+  &__links {
+    height: 100%;
+  }
+
   &__link {
+    cursor: pointer;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     margin: 0 10px;
+
+    transition: 0.3s all;
+
+    &:hover {
+      color: #e31b6d;
+    }
 
     &:first-child {
       margin-left: 0;
+      padding-left: 0;
     }
   }
   &__links {

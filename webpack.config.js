@@ -10,7 +10,7 @@ const isDev = !isProd;
 const pub = path.resolve(__dirname, "./src", "public");
 const app = path.resolve(__dirname, "./src", "app");
 const ctx = path.resolve(__dirname, "./src");
-const dist = path.resolve(__dirname, "./dist");
+const dist = path.resolve(__dirname, "./public");
 const paths = {
   ctx,
   dist,
