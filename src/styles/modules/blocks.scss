@@ -1,0 +1,10 @@
+.bar {
+  height: 4px;
+  width: 70px;
+  background: $secondaryColor;
+
+  &-projects {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+}

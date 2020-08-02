@@ -1,0 +1,72 @@
+$desktopWidth: 1280px;
+$smDesktopWidth: 980px;
+$tableWidth: 768px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;
+
+$mainFont: Roboto, Arial, Helvetica, sans-serif;
+$mainFontColor: #000;
+$mainFontSize: 20px;
+
+$primaryColor: #04c2c9;
+$secondaryColor: #1b242f;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: 400;
+  height: 100%;
+
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: $smDesktopWidth) {
+  }
+
+  @media screen and (max-width: $tableWidth) {
+    font-size: 17px;
+  }
+
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 16px;
+  }
+}
+
+.container {
+  width: 100%;
+  z-index: 1;
+  // display: flex;
+  // flex: 0 0 auto;
+  position: relative;
+  margin: 0 auto;
+  max-width: $desktopWidth;
+
+  @media screen and (max-width: $desktopWidth) {
+    max-width: $smDesktopWidth;
+  }
+
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: $tableWidth;
+  }
+
+  @media screen and (max-width: $tableWidth) {
+    max-width: $phoneWidth;
+  }
+
+  @media screen and (max-width: $phoneWidth) {
+    max-width: $smPhoneWidth;
+  }
+}
+
+@import "modules/about.scss";
+@import "modules/header.scss";
+@import "modules/projects.scss";
+@import "modules/blocks.scss";
+
