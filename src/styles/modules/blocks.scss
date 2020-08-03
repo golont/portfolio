@@ -3,7 +3,7 @@
   width: 70px;
   background: $secondaryColor;
 
-  &-projects {
+  &-projects, &-contacts {
     margin-top: 20px;
     margin-bottom: 50px;
   }
@@ -14,7 +14,7 @@
   text-transform: uppercase;
   font-weight: 600;
 
-  &-projects {
+  &-projects, &-contacts {
     padding-top: 20px;
   }
 

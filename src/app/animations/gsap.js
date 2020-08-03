@@ -70,6 +70,56 @@ const header = () => {
   }
 };
 
+const contacts = () => {
+  gsap.from([".title-contacts", ".bar-contacts"], {
+    scrollTrigger: ".contacts__items",
+    duration: 0.4,
+    stagger: 0.2,
+    x: "-300%",
+  });
+
+  const timeline = gsap.timeline({
+    defaults: {
+      duration: 0.3,
+      stagger: 0.2,
+      ease: "slow(0.7, 0.7, false)",
+    },
+    scrollTrigger: ".contacts__items",
+  });
+
+  timeline
+    .from(".contacts__item", { width: 0 })
+    .to(".contacts__item-data", {
+      width: "100%",
+      opacity: 1,
+    })
+    .to(
+      ".contacts__item-icon",
+      {
+        right: "0",
+        translateX: "0",
+      },
+      "<"
+    );
+
+  // gsap.to(".contacts__item-data", {
+  //   width: "100%",
+  //   ease: "linear",
+  //   duration: 0.3,
+  //   stagger: 0.2,
+  // });
+
+  // gsap.to(".contacts__item-icon", {});
+  // gsap.from(".projects__item", {
+  //   scrollTrigger: ".projects__items",
+  //   opacity: 0,
+  //   delay: 0.2,
+  //   duration: 0.4,
+  //   stagger: 0.2,
+  // });
+};
+
 init();
 projects();
 header();
+contacts();
