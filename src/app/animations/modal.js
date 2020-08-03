@@ -44,7 +44,7 @@ const modalContent = {
   fablab: {
     "title-modal": "FabLab",
     modal__technologies: "TypeScript, MERN - MongoDB, Express, React/Redux, NodeJS",
-    modal__description: `Проект FabLab, является заданием на производственную практику: создание интерфейса для просмотра описания офлайн курсов/работы предприятия, разработка панели администратора, для редактирования описания курсов`,
+    modal__description: `Проект FabLab, является заданием на производственную практику: создание интерфейса для просмотра описания офлайн курсов/работы предприятия, разработка панели администратора, для редактирования описания курсов.`,
     "modal__link-view": { href: "https://fablablab.herokuapp.com/" },
     "modal__link-github": "",
   },
