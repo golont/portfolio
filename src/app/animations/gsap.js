@@ -15,6 +15,30 @@ const init = () => {
     .from(".about__description", { x: "-300%" }, "<");
 };
 
+const modal = () => {
+  const timeline = gsap.timeline({
+    paused: true,
+    defaults: { duration: 0.2, stagger: 0.2 },
+  });
+  const modal = document.querySelector(".modal");
+  timeline
+    .to(modal, { opacity: 1, pointerEvents: "initial" })
+    .to(".modal__info", { opacity: 1 });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      timeline.reverse();
+    }
+  });
+  return (item) => {
+    item.addEventListener("click", () => {
+      timeline.play();
+    });
+  };
+};
+
+const showModal = modal();
+
 const projects = () => {
   gsap.from([".title-projects", ".bar-projects"], {
     scrollTrigger: ".projects__items",
@@ -39,7 +63,7 @@ const projects = () => {
     });
     const title = card.querySelector(".title");
     const more = card.querySelector(".card__more");
-
+    showModal(more);
     timeline
       .to(card, { opacity: 1 })
       .from(title, { y: "-120%", ease: "power4.out", opacity: 0 })
@@ -51,6 +75,8 @@ const projects = () => {
     card.addEventListener("mouseleave", () => {
       timeline.reverse();
     });
+
+    more.addEventListener("click", () => {});
   }
 };
 
@@ -66,7 +92,6 @@ const header = () => {
         ease: "expo.inOut",
       });
     });
-    console.log(link.dataset.to);
   }
 };
 
