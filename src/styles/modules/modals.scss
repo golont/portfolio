@@ -8,15 +8,91 @@
   left: 0;
   // transform: scale(0);
   background: rgba(0, 0, 0, 0.5);
-  // opacity: 0;
+  opacity: 0;
 
   &__info {
+    padding: 40px rem(25);
+    // padding-right: 40px;
     max-width: 700px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     color: #333;
-    // opacity: 0;
+    opacity: 0;
     position: relative;
-    transform: scale(0.9);
+    transform: scale(0);
+  }
+
+  &__close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: $secondaryColor;
+    transition: 0.3s all;
+    cursor: pointer;
+
+    &:hover {
+      color: $neutralColor;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__technologies {
+    color: $neutralColor;
+    text-align: justify;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &__description {
+    margin-top: 20px;
+    text-align: justify;
+  }
+
+  &__footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &-view {
+      background: $neutralColor;
+      border: 2px solid $neutralColor;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      padding: 11px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: 0.3s all;
+
+      &:hover {
+        color: $neutralColor;
+        background-color: #fff;
+      }
+
+      svg {
+        margin-right: 20px;
+      }
+    }
+    &-github {
+      padding: 0 20px;
+    }
   }
 }

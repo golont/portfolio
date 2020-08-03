@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollTo from "gsap/ScrollToPlugin";
+import showModal from "./modal";
 
 gsap.registerPlugin(ScrollTrigger, ScrollTo);
 
@@ -14,30 +15,6 @@ const init = () => {
     .from(".about__photo", { x: "-300%" }, "<")
     .from(".about__description", { x: "-300%" }, "<");
 };
-
-const modal = () => {
-  const timeline = gsap.timeline({
-    paused: true,
-    defaults: { duration: 0.2, stagger: 0.2 },
-  });
-  const modal = document.querySelector(".modal");
-  timeline
-    .to(modal, { opacity: 1, pointerEvents: "initial" })
-    .to(".modal__info", { opacity: 1 });
-
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      timeline.reverse();
-    }
-  });
-  return (item) => {
-    item.addEventListener("click", () => {
-      timeline.play();
-    });
-  };
-};
-
-const showModal = modal();
 
 const projects = () => {
   gsap.from([".title-projects", ".bar-projects"], {
@@ -75,8 +52,6 @@ const projects = () => {
     card.addEventListener("mouseleave", () => {
       timeline.reverse();
     });
-
-    more.addEventListener("click", () => {});
   }
 };
 
