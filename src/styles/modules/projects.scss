@@ -20,11 +20,16 @@
   &__item {
     position: relative;
     max-width: 400px;
+    opacity: 0;
     max-height: 320px;
     margin: 10px;
     img {
       width: 100%;
     }
+  }
+
+  &__wrapper-bar {
+    transform: translate(-100%);
   }
 }
 
@@ -48,6 +53,3 @@
     cursor: pointer;
   }
 }
-
-
-

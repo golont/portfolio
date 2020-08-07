@@ -31,7 +31,7 @@
     color: $secondaryColor;
     display: block;
     height: 65px;
-    width: 310px;
+    width: 0;
     &-data {
       width: 0;
       height: 100%;
@@ -53,5 +53,9 @@
       border-radius: 32px;
       color: $secondaryColor;
     }
+  }
+
+  &__wrapper-bar {
+    transform: translate(-100%);
   }
 }

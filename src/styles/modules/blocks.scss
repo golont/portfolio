@@ -3,7 +3,8 @@
   width: 70px;
   background: $secondaryColor;
 
-  &-projects, &-contacts {
+  &-projects,
+  &-contacts {
     margin-top: 20px;
     margin-bottom: 50px;
   }
@@ -14,8 +15,11 @@
   text-transform: uppercase;
   font-weight: 600;
 
-  &-projects, &-contacts {
+  &-projects,
+  &-contacts {
     padding-top: 20px;
+    transform: translate(-300%);
+    width: 100%;
   }
 
   &-card {
@@ -26,7 +30,6 @@
   &-modal {
     margin-top: 10px;
   }
-
 }
 
 .flex {
@@ -34,4 +37,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.w-100 {
+  width: 100%;
 }

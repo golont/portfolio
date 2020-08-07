@@ -9,23 +9,22 @@ const init = () => {
   const timeline = gsap.timeline({
     defaults: { duration: 0.5, stagger: 0.1, ease: "slow(0.7, 0.7, false)" },
   });
-  timeline
-    .from(".header", { duration: 1, y: "-100%" })
-    .from(".about__skill", { opacity: 0, delay: 0.2 }, "<")
-    .from(".about__photo", { x: "-300%" }, "<")
-    .from(".about__description", { x: "-300%" }, "<");
+  timeline.to(".header", { duration: 1, y: 0 })
+    .to(".about__skill", { opacity: 1, delay: 0.2 }, "<")
+    .to(".about__photo", { x: 0 }, "<")
+    .to(".about__description", { x: 0 }, "<");
 };
 
 const projects = () => {
-  gsap.from([".title-projects", ".bar-projects"], {
+  gsap.to([".title-projects", ".projects__wrapper-bar"], {
     scrollTrigger: ".projects__items",
     duration: 0.4,
     stagger: 0.2,
-    x: "-300%",
+    x: 0,
   });
-  gsap.from(".projects__item", {
+  gsap.to(".projects__item", {
     scrollTrigger: ".projects__items",
-    opacity: 0,
+    opacity: 1,
     delay: 0.2,
     duration: 0.4,
     stagger: 0.2,
@@ -71,11 +70,11 @@ const header = () => {
 };
 
 const contacts = () => {
-  gsap.from([".title-contacts", ".bar-contacts"], {
+  gsap.to([".title-contacts", ".contacts__wrapper-bar"], {
     scrollTrigger: ".contacts__items",
     duration: 0.4,
     stagger: 0.2,
-    x: "-300%",
+    x: 0,
   });
 
   const timeline = gsap.timeline({
@@ -88,7 +87,7 @@ const contacts = () => {
   });
 
   timeline
-    .from(".contacts__item", { width: 0 })
+    .to(".contacts__item", { width: "310px" })
     .to(".contacts__item-data", {
       width: "100%",
       opacity: 1,
@@ -101,22 +100,6 @@ const contacts = () => {
       },
       "<"
     );
-
-  // gsap.to(".contacts__item-data", {
-  //   width: "100%",
-  //   ease: "linear",
-  //   duration: 0.3,
-  //   stagger: 0.2,
-  // });
-
-  // gsap.to(".contacts__item-icon", {});
-  // gsap.from(".projects__item", {
-  //   scrollTrigger: ".projects__items",
-  //   opacity: 0,
-  //   delay: 0.2,
-  //   duration: 0.4,
-  //   stagger: 0.2,
-  // });
 };
 
 init();
